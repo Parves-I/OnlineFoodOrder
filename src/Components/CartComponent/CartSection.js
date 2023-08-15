@@ -35,39 +35,39 @@ function CartSection(props) {
 
     let sure = window.confirm("Are you confirm to buy");
     if (sure) {
-      var firebaseConfig = {
-        apiKey: "AIzaSyBGyGQMxBf1MJ1JkWz2Nl-0Xb05Yu-xiwI",
-        authDomain: "onlinefoodsystem-cc529.firebaseapp.com",
-        projectId: "onlinefoodsystem-cc529",
-        storageBucket: "onlinefoodsystem-cc529.appspot.com",
-        messagingSenderId: "803541575602",
-        appId: "1:803541575602:web:c0e2095fb4417fe9a066ab",
-        measurementId: "G-B3PHM86NRY",
-      };
+      //var firebaseConfig = {
+        // apiKey: "AIzaSyBGyGQMxBf1MJ1JkWz2Nl-0Xb05Yu-xiwI",
+        // authDomain: "onlinefoodsystem-cc529.firebaseapp.com",
+        // projectId: "onlinefoodsystem-cc529",
+        // storageBucket: "onlinefoodsystem-cc529.appspot.com",
+        // messagingSenderId: "803541575602",
+        // appId: "1:803541575602:web:c0e2095fb4417fe9a066ab",
+        // measurementId: "G-B3PHM86NRY",
+      //};
 
-      firebase.initializeApp(firebaseConfig);
+      // firebase.initializeApp(firebaseConfig);
       
-      let db = firebase.firestore();
+      // let db = firebase.firestore();
 
-      db.collection("users")
-        .add({
-          orders : OrderContainer,
-          rate : RateContainer,
-          total : total,
-          userdetail : userdetail
+      // db.collection("users")
+      //   .add({
+      //     orders : OrderContainer,
+      //     rate : RateContainer,
+      //     total : total,
+      //     userdetail : userdetail
 
-        })
-        .then((docRef) => {
+      //   })
+      //   .then((docRef) => {
           dispatch(Resetcount());
           dispatch(ResetData());
           history.push("/purchased");
-        })
-        .catch((error) => {
-          console.error("Error adding document: ", error);
-        });
+        // })
+        // .catch((error) => {
+        //   console.error("Error adding document: ", error);
+        // });
 
       
-    } else return null;
+    } 
   };
 
   const ResetHandler = (e) => {
